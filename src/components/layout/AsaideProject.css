@@ -1,0 +1,10 @@
+.paper {
+  position: absolute;
+  width: 75%;
+  max-Width: 350px,
+/*   overflow: auto,
+  height: 80%,
+  backgroundColor: theme.palette.background.paper,
+  boxShadow: theme.shadows[5],
+  padding: theme.spacing(2, 4, 3), */
+}

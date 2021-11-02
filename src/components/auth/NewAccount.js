@@ -4,6 +4,20 @@ import styled from "@emotion/styled"
 import alertContext from "../../context/alert/alertContext"
 import authContext from "../../context/auth/authContext"
 import {Link} from "react-router-dom"
+import { keyframes } from "@emotion/react"
+
+const fadeInDown = keyframes`
+0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+`
 const ContainerDiv = styled.div`
 width: 100%;
 height: 100vh;
@@ -22,6 +36,7 @@ max-width: 425px;
 max-height: 500px;
 border-radius: 10px;
 padding: 25px;
+animation: ${fadeInDown} 1s both;
 form{
   h2{
     text-align: center;

@@ -3,6 +3,21 @@ import alertContext from "../../context/alert/alertContext"
 import authContext from "../../context/auth/authContext"
 import styled from "@emotion/styled"
 import {Link }from "react-router-dom"
+import { keyframes } from "@emotion/react"
+
+const fadeInDown = keyframes`
+0% {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+`
+
 const LoginDiv = styled.div`
 width: 100%;
 height: 100vh;
@@ -20,6 +35,7 @@ form{
   width: 100%;
   max-width: 325px;
   max-height: 500px;
+  animation: ${fadeInDown} 1s both;
   h2{
     text-align: center;
     margin-bottom: 30px;

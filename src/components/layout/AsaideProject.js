@@ -5,8 +5,24 @@ import styled from "@emotion/styled"
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import "./AsaideProject.css"
+import { keyframes } from "@emotion/react"
+const fadeInLeft = keyframes`
+0% {
+  opacity: 0;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  }
+`
+
+
 const AsaideProjectDiv =styled.div`
 text-align: center;
+animation: ${fadeInLeft} 1s both;
 h2{
   color: #272727;
   span{
